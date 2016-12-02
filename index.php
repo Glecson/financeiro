@@ -38,9 +38,8 @@
     <!-- Material Design icon font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
-<body style="background-color: #455a64">
-
-    <main class="mdl-layout__content col-md-4" style="position: relative; left: 480px; top: 100px;background-color: white" >
+<body class="#303f9f indigo darken-4">
+    <main class="mdl-layout__content col-md-4" style="position: relative; left: 460px; top: 100px;background-color: white" >
 
         <!--Naked Form-->
         <div class="card-block call">
