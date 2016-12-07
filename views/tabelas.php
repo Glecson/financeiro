@@ -42,20 +42,23 @@
 
     <div class="mdl-layout__tab-bar mdl-js-ripple-effect #303f9f indigo darken-4">
       <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Todas as Faturas</a>
-      <a href="#fixed-tab-2" class="mdl-layout__tab">Faturas à Pagar</a>
-      <a href="#fixed-tab-3" class="mdl-layout__tab">Faturas à vencer</a>
+      <a href="#fixed-tab-2" class="mdl-layout__tab">Faturas abertas</a>
+      <a href="#fixed-tab-3" class="mdl-layout__tab">Faturas à Pagar</a>
       <a href="#fixed-tab-3" class="mdl-layout__tab">Faturas Pagas</a>
     </div>
   </header>
 
                 <!--Collapse content-->
-                <div class="collapse navbar-toggleable-xs" id="collapseEx2" style="padding-left: 550px;border: solid 1px red">
+                <div class="collapse navbar-toggleable-xs" id="collapseEx2" style="padding-left: 330px">
+                    <div class="md-form col-md-3" style="position: relative; left: -280px;top: 10px;">
+                        <a class="btn btn-primary waves-effect waves-light #303f9f indigo darken-4  "><i class="fa fa-plus" ></i>  Fatura</a>
+                    </div>
                     <div class="md-form col-md-2">
                         <input type="text" id="form1" class="form-control" placeholder="Total">
                         <label for="form1" class=""></label>
                     </div>
                     <!--Search form-->
-                    <form class="form-inline">
+                    <form class="form-inline" style="position: relative; left: 350px">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
                   mdl-textfield--floating-label mdl-textfield--align-right">
                             <label class="mdl-button mdl-js-button mdl-button--icon"
@@ -116,246 +119,6 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td>First Name</td>
-                            <td>First Name</td>
-                            <td>Abby</td>
-                            <td>Barrett</td>
-                            <td>@abbeme</td>
-                            <td>
-                                <a class="black-text"><i class="material-icons" role="presentation">visibility</i></a>
-                                <a class="black-text"><i class="material-icons" role="presentation">border_color</i></a>
-                                <a class="red-text"><i class="material-icons" role="presentation">delete_sweep</i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>First Name</td>
-                            <td>First Name</td>
-                            <td>Abby</td>
-                            <td>Barrett</td>
-                            <td>@abbeme</td>
-                            <td>
-                                <a class="black-text"><i class="material-icons" role="presentation">visibility</i></a>
-                                <a class="black-text"><i class="material-icons" role="presentation">border_color</i></a>
-                                <a class="red-text"><i class="material-icons" role="presentation">delete_sweep</i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>First Name</td>
-                            <td>First Name</td>
-                            <td>Abby</td>
-                            <td>Barrett</td>
-                            <td>@abbeme</td>
-                            <td>
-                                <a class="black-text"><i class="material-icons" role="presentation">visibility</i></a>
-                                <a class="black-text"><i class="material-icons" role="presentation">border_color</i></a>
-                                <a class="red-text"><i class="material-icons" role="presentation">delete_sweep</i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>First Name</td>
-                            <td>First Name</td>
-                            <td>Abby</td>
-                            <td>Barrett</td>
-                            <td>@abbeme</td>
-                            <td>
-                                <a class="black-text"><i class="material-icons" role="presentation">visibility</i></a>
-                                <a class="black-text"><i class="material-icons" role="presentation">border_color</i></a>
-                                <a class="red-text"><i class="material-icons" role="presentation">delete_sweep</i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>First Name</td>
-                            <td>First Name</td>
-                            <td>Abby</td>
-                            <td>Barrett</td>
-                            <td>@abbeme</td>
-                            <td>
-                                <a class="black-text"><i class="material-icons" role="presentation">visibility</i></a>
-                                <a class="black-text"><i class="material-icons" role="presentation">border_color</i></a>
-                                <a class="red-text"><i class="material-icons" role="presentation">delete_sweep</i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>First Name</td>
-                            <td>First Name</td>
-                            <td>Abby</td>
-                            <td>Barrett</td>
-                            <td>@abbeme</td>
-                            <td>
-                                <a class="black-text"><i class="material-icons" role="presentation">visibility</i></a>
-                                <a class="black-text"><i class="material-icons" role="presentation">border_color</i></a>
-                                <a class="red-text"><i class="material-icons" role="presentation">delete_sweep</i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>First Name</td>
-                            <td>First Name</td>
-                            <td>Abby</td>
-                            <td>Barrett</td>
-                            <td>@abbeme</td>
-                            <td>
-                                <a class="black-text"><i class="material-icons" role="presentation">visibility</i></a>
-                                <a class="black-text"><i class="material-icons" role="presentation">border_color</i></a>
-                                <a class="red-text"><i class="material-icons" role="presentation">delete_sweep</i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>First Name</td>
-                            <td>First Name</td>
-                            <td>Abby</td>
-                            <td>Barrett</td>
-                            <td>@abbeme</td>
-                            <td>
-                                <a class="black-text"><i class="material-icons" role="presentation">visibility</i></a>
-                                <a class="black-text"><i class="material-icons" role="presentation">border_color</i></a>
-                                <a class="red-text"><i class="material-icons" role="presentation">delete_sweep</i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>First Name</td>
-                            <td>First Name</td>
-                            <td>Abby</td>
-                            <td>Barrett</td>
-                            <td>@abbeme</td>
-                            <td>
-                                <a class="black-text"><i class="material-icons" role="presentation">visibility</i></a>
-                                <a class="black-text"><i class="material-icons" role="presentation">border_color</i></a>
-                                <a class="red-text"><i class="material-icons" role="presentation">delete_sweep</i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>First Name</td>
-                            <td>First Name</td>
-                            <td>Abby</td>
-                            <td>Barrett</td>
-                            <td>@abbeme</td>
-                            <td>
-                                <a class="black-text"><i class="material-icons" role="presentation">visibility</i></a>
-                                <a class="black-text"><i class="material-icons" role="presentation">border_color</i></a>
-                                <a class="red-text"><i class="material-icons" role="presentation">delete_sweep</i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>First Name</td>
-                            <td>First Name</td>
-                            <td>Abby</td>
-                            <td>Barrett</td>
-                            <td>@abbeme</td>
-                            <td>
-                                <a class="black-text"><i class="material-icons" role="presentation">visibility</i></a>
-                                <a class="black-text"><i class="material-icons" role="presentation">border_color</i></a>
-                                <a class="red-text"><i class="material-icons" role="presentation">delete_sweep</i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>First Name</td>
-                            <td>First Name</td>
-                            <td>Abby</td>
-                            <td>Barrett</td>
-                            <td>@abbeme</td>
-                            <td>
-                                <a class="black-text"><i class="material-icons" role="presentation">visibility</i></a>
-                                <a class="black-text"><i class="material-icons" role="presentation">border_color</i></a>
-                                <a class="red-text"><i class="material-icons" role="presentation">delete_sweep</i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>First Name</td>
-                            <td>First Name</td>
-                            <td>Abby</td>
-                            <td>Barrett</td>
-                            <td>@abbeme</td>
-                            <td>
-                                <a class="black-text"><i class="material-icons" role="presentation">visibility</i></a>
-                                <a class="black-text"><i class="material-icons" role="presentation">border_color</i></a>
-                                <a class="red-text"><i class="material-icons" role="presentation">delete_sweep</i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>First Name</td>
-                            <td>First Name</td>
-                            <td>Abby</td>
-                            <td>Barrett</td>
-                            <td>@abbeme</td>
-                            <td>
-                                <a class="black-text"><i class="material-icons" role="presentation">visibility</i></a>
-                                <a class="black-text"><i class="material-icons" role="presentation">border_color</i></a>
-                                <a class="red-text"><i class="material-icons" role="presentation">delete_sweep</i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>First Name</td>
-                            <td>First Name</td>
-                            <td>Abby</td>
-                            <td>Barrett</td>
-                            <td>@abbeme</td>
-                            <td>
-                                <a class="black-text"><i class="material-icons" role="presentation">visibility</i></a>
-                                <a class="black-text"><i class="material-icons" role="presentation">border_color</i></a>
-                                <a class="red-text"><i class="material-icons" role="presentation">delete_sweep</i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>First Name</td>
-                            <td>First Name</td>
-                            <td>Abby</td>
-                            <td>Barrett</td>
-                            <td>@abbeme</td>
-                            <td>
-                                <a class="black-text"><i class="material-icons" role="presentation">visibility</i></a>
-                                <a class="black-text"><i class="material-icons" role="presentation">border_color</i></a>
-                                <a class="red-text"><i class="material-icons" role="presentation">delete_sweep</i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>First Name</td>
-                            <td>First Name</td>
-                            <td>Abby</td>
-                            <td>Barrett</td>
-                            <td>@abbeme</td>
-                            <td>
-                                <a class="black-text"><i class="material-icons" role="presentation">visibility</i></a>
-                                <a class="black-text"><i class="material-icons" role="presentation">border_color</i></a>
-                                <a class="red-text"><i class="material-icons" role="presentation">delete_sweep</i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>First Name</td>
-                            <td>First Name</td>
-                            <td>Abby</td>
-                            <td>Barrett</td>
-                            <td>@abbeme</td>
-                            <td>
-                                <a class="black-text"><i class="material-icons" role="presentation">visibility</i></a>
-                                <a class="black-text"><i class="material-icons" role="presentation">border_color</i></a>
-                                <a class="red-text"><i class="material-icons" role="presentation">delete_sweep</i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>First Name</td>
-                            <td>First Name</td>
-                            <td>Abby</td>
-                            <td>Barrett</td>
-                            <td>@abbeme</td>
-                            <td>
-                                <a class="black-text"><i class="material-icons" role="presentation">visibility</i></a>
-                                <a class="black-text"><i class="material-icons" role="presentation">border_color</i></a>
-                                <a class="red-text"><i class="material-icons" role="presentation">delete_sweep</i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>First Name</td>
-                            <td>First Name</td>
-                            <td>Abby</td>
-                            <td>Barrett</td>
-                            <td>@abbeme</td>
-                            <td>
-                                <a class="black-text"><i class="material-icons" role="presentation">visibility</i></a>
-                                <a class="black-text"><i class="material-icons" role="presentation">border_color</i></a>
-                                <a class="red-text"><i class="material-icons" role="presentation">delete_sweep</i></a>
-                            </td>
-                        </tr>
                         <tr>
                             <td>First Name</td>
                             <td>First Name</td>

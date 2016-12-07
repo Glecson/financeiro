@@ -32,7 +32,7 @@
 <?php include 'menu.php'; ?>
 <div class="collapse navbar-toggleable-xs" id="collapseEx2" style="padding-left: 550px">
     <div>
-        <p><h2>Cadastro de usuário</h2></p>
+        <p><h2>Cadastro de categoria</h2></p>
     </div>
 </div>
 <main class="mdl-layout__content">
@@ -42,33 +42,15 @@
     <div class="card-block col-lg-4"  >
         <!--Body-->
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="position: relative; left: 50px;">
-            <input class="mdl-textfield__input" type="text" name="nome" id="sample3" tabindex="1">
-            <label class="mdl-textfield__label" for="sample3" style="color:#303f9f">Informe seu nome</label>
-        </div>
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="position: relative; left: 50px;">
-            <input class="mdl-textfield__input" type="text" name="login" id="sample3" tabindex="3">
-            <label class="mdl-textfield__label" for="sample3" style="color: #303f9f">Cadastre o Login</label>
-        </div>
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="position: relative; left: 50px;">
-            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
-                <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="admin">
-                <span class="mdl-radio__label">Admin</span>
-            </label>
-            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
-                <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="usuario"  checked>
-                <span class="mdl-radio__label">Usuario comum</span>
-            </label>
+            <input class="mdl-textfield__input" type="text" name="tipo" id="sample3" tabindex="2">
+            <label class="mdl-textfield__label" for="sample3" style="color: #303f9f">Informe o tipo</label>
         </div>
     </div>
         <div class="card-block col-lg-4" >
             <!--Body-->
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="position: relative; left: 50px;">
-                <input class="mdl-textfield__input" type="text" name="matricula" id="sample3" tabindex="2">
-                <label class="mdl-textfield__label" for="sample3" style="color: #303f9f">Informe sua matricula</label>
-            </div>
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="position: relative; left: 50px;">
-                <input class="mdl-textfield__input" type="text" name="senha" id="sample3" tabindex="4">
-                <label class="mdl-textfield__label" for="sample3" style="color: #303f9f">Cadastre a senha</label>
+                <input class="mdl-textfield__input" type="text" name="descricao" id="sample3" tabindex="2">
+                <label class="mdl-textfield__label" for="sample3" style="color: #303f9f">Informe a descrição</label>
             </div>
         </div>
         <div class="text-xs-center col-md-10">

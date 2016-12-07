@@ -9,9 +9,9 @@
 
     <title>Material Design Bootstrap</title>
 
-    <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <script src="js/material.min.js"></script>
     
-    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="css/material.indigo-pink.min.css">
     <!-- Material Design icon font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
@@ -33,8 +33,8 @@
 <html>
 <head>
     <!-- Material Design Lite -->
-    <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
-    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+    <script src="js/material.min.js"></script>
+    <link rel="stylesheet" href="css/material.indigo-pink.min.css">
     <!-- Material Design icon font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
@@ -51,22 +51,19 @@
             </div>
 
             <!--Body-->
-            <div class="md-form">
-                <i class="fa fa-user prefix"></i>
-                <input type="text" id="form2" class="form-control">
-                <label for="form2">Informe seu login</label>
-            </div>
-
-            <div class="md-form">
-                <i class="fa fa-lock prefix"></i>
-                <input type="password" id="form4" class="form-control">
-                <label for="form4">Informe sua senha</label>
-            </div>
-
-            <div class="text-xs-center">
-                <button class="btn btn-deep-purple">Acessar</button>
-            </div>
-
+            <form>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="position: relative; left: 50px;">
+                    <input class="mdl-textfield__input" type="text" id="sample3">
+                    <label class="mdl-textfield__label" for="sample3" style="color: black">Informe seu Login</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="position: relative; left: 50px;">
+                    <input class="mdl-textfield__input" type="text" id="sample3">
+                    <label class="mdl-textfield__label" for="sample3" style="color: black">Informe sua Senha</label>
+                </div>
+                <div class="text-xs-center">
+                     <button class="btn btn-default " style="background-color: #303f9f" ">Acessar</button>
+                </div>
+            </form>
         </div>
 
     </main>
