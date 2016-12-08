@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br" xmlns="http://www.w3.org/1999/html">
-
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -38,51 +36,59 @@
             });
         }
     </script>
-
 </head>
 <body>
 <?php include 'menu.php'; ?>
 <div class="collapse navbar-toggleable-xs" id="collapseEx2" style="padding-left: 550px">
     <div>
-        <h5>CADASTRO FORNECEDORES</h5>
+        <p><h4>LANÇAMENTO FATURAS</h4></p>
     </div>
 </div>
 <main class="mdl-layout__content">
     <!--Naked Form-->
     <div class="col-lg-8" style="position: relative; left: 220px; top: 30px>
     <form method="get">
-    <div class="card-block col-lg-4"  >
+    <form method="get">
+        <div class="card-block col-lg-4" style="position: relative; top: 35px" >
         <!--Body-->
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="position: relative; left: 50px;">
-            <input class="mdl-textfield__input" type="text" name="nome" id="sample3" tabindex="1" required>
-            <label class="mdl-textfield__label" for="sample3" style="color: #303f9f; font-size:large">Razão social/Apelido</label>
+            <input class="mdl-textfield__input" type="number" name="num" id="sample3" tabindex="1" required>
+            <label class="mdl-textfield__label" for="sample3" style="color: #303f9f; font-size:large">Nº boleto</label>
         </div>
         <br /><br />
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="position: relative; left: 50px;">
-            <input class="mdl-textfield__input" type="email" name="email" id="sample3" tabindex="4">
-            <label class="mdl-textfield__label" for="sample3" style="color: #303f9f; font-size:large">E-mail</label>
+            <select class="mdb-select colorful-select dropdown-primary" tabindex="4">
+                <option value="" disabled selected >Selecione uma categoria...</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="1">aption 1</option>
+                <option value="2">bption 2</option>
+                <option value="3">cption 3</option>
+            </select>
         </div>
         <br /><br />
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="position: relative; left: 50px;">
-            <input class="mdl-textfield__input" type="text" name="cidade" id="sample3" tabindex="7" required>
-            <label class="mdl-textfield__label" for="sample3" style="color: #303f9f; font-size:large">Cidade</label>
+            <input class="mdl-textfield__input" type="number" name="desconto" id="sample3" tabindex="7">
+            <label class="mdl-textfield__label" for="sample3" style="color: #303f9f; font-size:large">Desconto</label>
         </div>
     </div>
         <div class="card-block col-lg-4" >
             <!--Body-->
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="position: relative; left: 50px;">
-                <input class="mdl-textfield__input" type="number" name="cnpf" id="sample3" tabindex="2" required>
-                <label class="mdl-textfield__label" for="sample3" style="color: #303f9f; font-size:large">CNPJ/CPF</label>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="position: relative; left: 50px">
+                <label for="form5" style="color: #303f9f; font-size:large">Data lançamento</label>
+                <input type="date" name="dtlanc" id="form5" class="form-control" tabindex="2" required>
             </div>
             <br /><br />
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="position: relative; left: 50px;">
-                <input class="mdl-textfield__input" type="text" name="ender" id="sample3" tabindex="5" required>
-                <label class="mdl-textfield__label" for="sample3" style="color: #303f9f; font-size:large">Endereço / Nº</label>
-            </div>
-            <br /><br />
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="position: relative; left: 50px;">
-                <select class="mdb-select colorful-select dropdown-primary" tabindex="8">
-                    <option value="" disabled selected >Selecione o estado</option>
+                <select class="mdb-select colorful-select dropdown-primary" tabindex="5">
+                    <option value="" disabled selected>Fornecedor</option>
                     <option value="1">Option 1</option>
                     <option value="2">Option 2</option>
                     <option value="3">Option 3</option>
@@ -97,22 +103,31 @@
                     <option value="3">cption 3</option>
                 </select>
             </div>
+            <br /><br />
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="position: relative; left: 50px;">
+                <input class="mdl-textfield__input" type="number" name="vlpg" id="sample3" tabindex="8">
+                <label class="mdl-textfield__label" for="sample3" style="color: #303f9f; font-size:large">Valor pago</label>
+            </div>
         </div>
-        <div class="card-block col-lg-4" >
+        <div class="card-block col-lg-4">
             <!--Body-->
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="position: relative; left: 50px;">
-                <input class="mdl-textfield__input" type="tel" name="tele" id="sample3" tabindex="3" required>
-                <label class="mdl-textfield__label" for="sample3" style="color: #303f9f; font-size:large">Telefone contato</label>
+                <label for="form5" style="color: #303f9f; font-size:large">Data vencimento</label>
+                <input type="date" name="dtvenc" id="form5" class="form-control" tabindex="3" required>
             </div>
             <br /><br />
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="position: relative; left: 50px;">
-                <input class="mdl-textfield__input" type="text" name="bairro" id="sample3" tabindex="6">
-                <label class="mdl-textfield__label" for="sample3" style="color: #303f9f; font-size:large">Bairro</label>
+                <input class="mdl-textfield__input" type="text" name="valor" id="sample3" tabindex="6">
+                <label class="mdl-textfield__label" for="sample3" style="color: #303f9f; font-size:large">Valor</label>
             </div>
             <br /><br />
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="position: relative; left: 50px;">
-                <input class="mdl-textfield__input" type="number" name="cep" id="sample3" tabindex="9">
-                <label class="mdl-textfield__label" for="sample3" style="color: #303f9f; font-size:large">CEP</label>
+                <select class="mdb-select colorful-select dropdown-primary" tabindex="9">
+                    <option value="" disabled selected>status</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                </select>
             </div>
         </div>
         <div class="text-xs-center">

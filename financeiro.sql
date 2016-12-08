@@ -63,7 +63,7 @@ CREATE TABLE `faturas` (
 -- Extraindo dados da tabela `faturas`
 --
 
-INSERT INTO `faturas` (`id`, `num`, `lancada`, `vencimento`, `categoria`, `fornecedor`, `pagar`, `desconto`, `pago`, `status`) VALUES
+INSERT INTO `faturas` (`id`, `num`, `lancada`, `vencimento`, `categoria`, `fornecedor`, valor, `desconto`, `pago`, `status`) VALUES
 (1, '123', '2016-12-01', '2016-12-07', 'material', 'Luiz', '2000.00', '100.00', '1900.00', 'fechada'),
 (2, '111', '2016-12-01', '2016-12-30', 'material', 'Luiz', '300.00', '0.00', '0.00', 'aberta'),
 (3, '222', '2016-12-01', '2016-12-30', 'material', 'Luiz', '400.00', '0.00', '0.00', 'aberta'),

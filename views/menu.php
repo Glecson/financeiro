@@ -3,8 +3,7 @@
   <header class="mdl-layout__header #303f9f indigo darken-3">
     <div class="mdl-layout__header-row">
       <!-- Title -->
-      <a href="#"><span class="mdl-layout-title white-text">GERENCIADORFINANCEIRO</span></a>
-
+      <a href="tabelas.php"><span class="mdl-layout-title white-text">GERENCIADORFINANCEIRO</span></a>
     </div>
 
   </header>
@@ -22,15 +21,15 @@
                     </button>
                     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
                         <li class="mdl-menu__item"><i class="fa fa-user"> </i> Perfil</li>
-                        <li class="mdl-menu__item"><i class="fa fa-user-plus"> </i> Add Usuário</li>
+                        <li class="mdl-menu__item"><i class="fa fa-user-plus"></i><a href="cadusuario.php"> Add Usuário</a></li>
                         <li class="mdl-menu__item"><i class="fa fa-sign-out"> </i> Logouf</li>
                     </ul>
                 </div>
             </header>
             <nav class="demo-navigation mdl-navigation ">
-                <a class="mdl-navigation__link mdl-color-text--blue-grey-400" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Principal</a>
-                <a class="mdl-navigation__link mdl-color-text--blue-grey-400" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">payment</i>Faturas geral</a>
-                <a class="mdl-navigation__link mdl-color-text--blue-grey-400" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">shopping_cart</i>Fornecedores</a>
-                <a class="mdl-navigation__link mdl-color-text--blue-grey-400" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">supervisor_account</i>Usuários</a>
+                <a class="mdl-navigation__link mdl-color-text--blue-grey-400" href="tabelas.php"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Principal</a>
+                <a class="mdl-navigation__link mdl-color-text--blue-grey-400" href="fornecedores.php"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">shopping_cart</i>Fornecedores</a>
+                <a class="mdl-navigation__link mdl-color-text--blue-grey-400" href="usuarios.php"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">supervisor_account</i>Usuários</a>
+                <a class="mdl-navigation__link mdl-color-text--blue-grey-400" href="categorias.php"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">payment</i>Categorias</a>
             </nav>
         </div>

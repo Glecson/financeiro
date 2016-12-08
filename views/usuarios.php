@@ -35,30 +35,21 @@
   <header class="mdl-layout__header #303f9f indigo darken-3">
     <div class="mdl-layout__header-row">
       <!-- Title -->
-      <a href="tabelas.php"><span class="mdl-layout-title white-text">GERENCIADORFINANCEIRO</span></a>
+      <a href="#"><span class="mdl-layout-title white-text">GERENCIADORFINANCEIRO</span></a>
 
     </div>
     <!-- Tabs -->
-
-    <div class="mdl-layout__tab-bar mdl-js-ripple-effect #303f9f indigo darken-4">
-      <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Todas as Faturas</a>
-      <a href="#fixed-tab-2" class="mdl-layout__tab">Faturas abertas</a>
-      <a href="#fixed-tab-3" class="mdl-layout__tab">Faturas à Pagar</a>
-      <a href="#fixed-tab-3" class="mdl-layout__tab">Faturas Pagas</a>
-    </div>
   </header>
-
                 <!--Collapse content-->
                 <div class="collapse navbar-toggleable-xs" id="collapseEx2" style="padding-left: 330px">
                     <div class="md-form col-md-3" style="position: relative; left: -280px;top: 10px;">
                         <a href="cadfatura.php" class="btn btn-primary waves-effect waves-light #303f9f indigo darken-4  "><i class="fa fa-plus" ></i>  Fatura</a>
                     </div>
-                    <div class="md-form col-md-2">
-                        <input type="text" id="form1" class="form-control" placeholder="Total">
-                        <label for="form1" class=""></label>
+                    <div class="md-form col-md-4">
+                        <p><h4>LISTA DE USUÁRIOS</h4></p>
                     </div>
                     <!--Search form-->
-                    <form method="get" class="form-inline" style="position: relative; left: 350px">
+                    <form class="form-inline" style="position: relative; left: 200px">
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
                   mdl-textfield--floating-label mdl-textfield--align-right">
                             <label class="mdl-button mdl-js-button mdl-button--icon"
@@ -66,7 +57,7 @@
                                 <i class="material-icons">search</i>
                             </label>
                             <div class="mdl-textfield__expandable-holder">
-                                <input class="mdl-textfield__input" type="text" name="busca"
+                                <input class="mdl-textfield__input" type="text" name="sample"
                                        id="fixed-header-drawer-exp">
                             </div>
                             </div>
@@ -94,10 +85,10 @@
                 </div>
             </header>
             <nav class="demo-navigation mdl-navigation ">
-                <a class="mdl-navigation__link mdl-color-text--blue-grey-400" href="tabelas.php"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Principal</a>
-                <a class="mdl-navigation__link mdl-color-text--blue-grey-400" href="fornecedores.php"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">shopping_cart</i>Fornecedores</a>
-                <a class="mdl-navigation__link mdl-color-text--blue-grey-400" href="usuarios.php"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">supervisor_account</i>Usuários</a>
-                <a class="mdl-navigation__link mdl-color-text--blue-grey-400" href="categorias.php"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">payment</i>Categorias</a>
+                <a class="mdl-navigation__link mdl-color-text--blue-grey-400" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Principal</a>
+                <a class="mdl-navigation__link mdl-color-text--blue-grey-400" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">shopping_cart</i>Fornecedores</a>
+                <a class="mdl-navigation__link mdl-color-text--blue-grey-400" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">payment</i>Categorias</a>
+                <a class="mdl-navigation__link mdl-color-text--blue-grey-400" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">supervisor_account</i>Usuários</a>
             </nav>
         </div>
 

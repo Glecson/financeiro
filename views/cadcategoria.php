@@ -32,25 +32,25 @@
 <?php include 'menu.php'; ?>
 <div class="collapse navbar-toggleable-xs" id="collapseEx2" style="padding-left: 550px">
     <div>
-        <p><h2>Cadastro de categoria</h2></p>
+        <p><h4>CADASTRO CATEGORIAS</h4></p>
     </div>
 </div>
 <main class="mdl-layout__content">
     <!--Naked Form-->
-    <div class="col-lg-8" style="position: relative; left: 330px; top: 30px">
+    <div class="col-lg-8" style="position: relative; left: 330px; top: 60px">
     <form method="get">
     <div class="card-block col-lg-4"  >
         <!--Body-->
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="position: relative; left: 50px;">
-            <input class="mdl-textfield__input" type="text" name="tipo" id="sample3" tabindex="2">
-            <label class="mdl-textfield__label" for="sample3" style="color: #303f9f">Informe o tipo</label>
+            <input class="mdl-textfield__input" type="text" name="nome" id="sample3" tabindex="1" required>
+            <label class="mdl-textfield__label" for="sample3" style="color: #303f9f; font-size:large">Nome</label>
         </div>
     </div>
-        <div class="card-block col-lg-4" >
+        <div class="card-block col-lg-8" >
             <!--Body-->
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="position: relative; left: 50px;">
-                <input class="mdl-textfield__input" type="text" name="descricao" id="sample3" tabindex="2">
-                <label class="mdl-textfield__label" for="sample3" style="color: #303f9f">Informe a descrição</label>
+                <input class="mdl-textfield__input" type="text" name="desc" id="sample3" tabindex="2">
+                <label class="mdl-textfield__label" for="sample3" style="color: #303f9f; font-size:large">Descrição</label>
             </div>
         </div>
         <div class="text-xs-center col-md-10">
