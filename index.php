@@ -1,3 +1,11 @@
+<?php
+
+include_once 'config.php';
+
+$c = new Controller();
+$c->login();
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -53,15 +61,18 @@
             <!--Body-->
             <form>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="position: relative; left: 50px;">
-                    <input class="mdl-textfield__input" type="text" id="sample3">
+                    <input class="mdl-textfield__input" type="text" name="usuario" id="sample3">
                     <label class="mdl-textfield__label" for="sample3" style="color: black">Informe seu Login</label>
                 </div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="position: relative; left: 50px;">
-                    <input class="mdl-textfield__input" type="text" id="sample3">
+                    <input class="mdl-textfield__input" type="text" name="senha" id="sample3">
                     <label class="mdl-textfield__label" for="sample3" style="color: black">Informe sua Senha</label>
                 </div>
                 <div class="text-xs-center">
-                     <button class="btn btn-default " style="background-color: #303f9f" ">Acessar</button>
+                     <button class="btn btn-default " type="submit" name="login" style="background-color: #303f9f" ">Acessar</button>
+                    <?php if ($c->login)
+                        echo '<h4 class = "alert alert-warning" style = "margin: 10px auto; text-align: center">' . $c->login . '</h4>';
+                    ?>
                 </div>
             </form>
         </div>

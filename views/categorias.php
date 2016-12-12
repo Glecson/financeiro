@@ -65,61 +65,39 @@
                 </div>
                 <!--/.Collapse content-->
 
-        <div class="demo-drawer mdl-layout__drawer elegant-color
-
-#2E2E2E mdl-color-text--blue-grey-50">
-            <header class="demo-drawer-header">
-
-                <div class="demo-avatar-dropdown" style="position: relative; left: 15px; top: 5px; padding-bottom: 10px">
-                    <span>hello@example.com</span>
-
-                    <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-                        <i class="material-icons" role="presentation">arrow_drop_down</i>
-                        <span class="visuallyhidden">Accounts</span>
-                    </button>
-                    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
-                        <li class="mdl-menu__item"><i class="fa fa-user"> </i> Perfil</li>
-                        <li class="mdl-menu__item"><i class="fa fa-user-plus"></i><a href="cadusuario.php"> Add Usuário</a></li>
-                        <li class="mdl-menu__item"><i class="fa fa-sign-out"> </i> Logouf</li>
-                    </ul>
-                </div>
-            </header>
-            <nav class="demo-navigation mdl-navigation ">
-                <a class="mdl-navigation__link mdl-color-text--blue-grey-400" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Principal</a>
-                <a class="mdl-navigation__link mdl-color-text--blue-grey-400" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">shopping_cart</i>Fornecedores</a>
-                <a class="mdl-navigation__link mdl-color-text--blue-grey-400" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">payment</i>Categorias</a>
-                <a class="mdl-navigation__link mdl-color-text--blue-grey-400" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">supervisor_account</i>Usuários</a>
-            </nav>
-        </div>
+        <?php include 'menulateral.php'; ?>
 
   <main class="mdl-layout__content">
     <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
       <div class="page-content">
             <div class="row">
-                <div class="col-md-12" style="padding-left: 100px">
+                <div class="col-md-12" style="padding-left: 300px">
 
                     <table class="table">
                         <thead>
                         <tr>
-                            <th>First Name</th>
-                            <th>First Name</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Username</th>
-                            <th>Actions</th>
+                            <th>Nome</th>
+                            <th>Descrição</th>
+                            <th>Acões</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
                             <td>First Name</td>
                             <td>First Name</td>
-                            <td>Abby</td>
-                            <td>Barrett</td>
-                            <td>@abbeme</td>
                             <td>
-                                <a class="black-text"><i class="material-icons" role="presentation">visibility</i></a>
-                                <a class="black-text"><i class="material-icons" role="presentation">border_color</i></a>
-                                <a class="red-text"><i class="material-icons" role="presentation">delete_sweep</i></a>
+                                <a class="blue-text"><div id="tt1" class="icon material-icons">visibility</div>
+                                    <div class="mdl-tooltip" data-mdl-for="tt1"><strong>Visualizar</strong>
+                                    </div>
+                                </a>
+                                <a class="green-text"><div id="tt2" class="icon material-icons">border_color</div>
+                                    <div class="mdl-tooltip" data-mdl-for="tt2"><strong>Editar</strong>
+                                    </div>
+                                </a>
+                                <a class="red-text"><div id="tt3" class="icon material-icons">delete_sweep</div>
+                                    <div class="mdl-tooltip" data-mdl-for="tt3"><strong>Deletar</strong>
+                                    </div>
+                                </a>
                             </td>
                         </tr>
                         </tbody>

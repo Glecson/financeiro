@@ -29,10 +29,10 @@
 
 </head>
 <body>
-<?php include 'menu.php'; ?>
+<?php include 'menucomp.php'; ?>
 <div class="collapse navbar-toggleable-xs" id="collapseEx2" style="padding-left: 550px">
     <div>
-        <p><h2>CADASTRO USUÁRIOS</h2></p>
+        <p><h4>CADASTRO USUÁRIOS</h4></p>
     </div>
 </div>
 <main class="mdl-layout__content">
@@ -43,13 +43,13 @@
         <!--Body-->
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="position: relative; left: 50px;">
             <input class="mdl-textfield__input" type="text" name="nome" id="sample3" tabindex="1" required>
-            <label class="mdl-textfield__label" for="sample3" style="color: #303f9f; font-size:large">Nome</label>
+            <label class="mdl-textfield__label" for="sample3" style="color: #5a5a5a; font-size:medium">Nome</label>
         </div>
         <br />
         <br />
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="position: relative; left: 50px;">
             <input class="mdl-textfield__input" type="text" name="login" id="sample3" tabindex="3" required>
-            <label class="mdl-textfield__label" for="sample3" style="color: #303f9f; font-size:large">Cadastre um Login</label>
+            <label class="mdl-textfield__label" for="sample3" style="color: #5a5a5a; font-size:medium">Cadastre um Login</label>
         </div>
         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="position: relative; left: 50px;">
             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
@@ -66,13 +66,13 @@
             <!--Body-->
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="position: relative; left: 50px;">
                 <input class="mdl-textfield__input" type="number" name="matri" id="sample3" tabindex="2">
-                <label class="mdl-textfield__label" for="sample3" style="color: #303f9f; font-size:large">Matricula</label>
+                <label class="mdl-textfield__label" for="sample3" style="color: #5a5a5a; font-size:medium">Matricula</label>
             </div>
             <br />
             <br />
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="position: relative; left: 50px;">
                 <input class="mdl-textfield__input" type="text" name="senha" id="sample3" tabindex="4" required>
-                <label class="mdl-textfield__label" for="sample3" style="color: #303f9f; font-size:large">Cadastre uma senha</label>
+                <label class="mdl-textfield__label" for="sample3" style="color: #5a5a5a; font-size:medium">Cadastre uma senha</label>
             </div>
         </div>
         <div class="text-xs-center col-md-10">

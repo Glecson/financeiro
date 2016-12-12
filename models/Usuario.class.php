@@ -1,6 +1,5 @@
 <?php
 
-    require_once 'Conexao.class.php';
 
 class Usuario{
 
@@ -54,6 +53,17 @@ class Usuario{
         if($busca->rowCount() > 0){
             return true;
         }
+    }
+
+    function validaAcesso($login, $senha) {
+
+        $result = $this->con->query("SELECT * FROM usuario WHERE login = '{$login}' AND senha = '{$senha}'");
+
+        if ($result->rowCount() > 0) {
+
+            return $result->fetch(PDO::FETCH_ASSOC);
+        }
+        return FALSE;
     }
 
 

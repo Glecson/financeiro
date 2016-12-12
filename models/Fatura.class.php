@@ -11,9 +11,9 @@ class Fatura{
         $this->con = $conexao->getConexao();
     }
 
-    function addFatura($num, $lancada, $venc, $cat, $fornec, $pagar, $status){
-        if($this->con->exec("INSERT INTO faturas (num,lancada,vencimento,categoria,fornecedor,valor, status) VALUES ('{$num}', '{$lancada}', '{$venc}', '{$cat}', '{$fornec}', '{$pagar}', '{$status}')")){
-            return "Fatura cadastrada com Sucesso!";
+    function addFatura($num, $lancada, $venc, $cat, $fornec, $valor, $status){
+        if($this->con->exec("INSERT INTO faturas (num,lancada,vencimento,categoria,fornecedor,valor, status) VALUES ('{$num}', '{$lancada}', '{$venc}', '{$cat}', '{$fornec}', '{$valor}', '{$status}')")){
+            return true;
         }
             return false;
     }
@@ -21,7 +21,7 @@ class Fatura{
     function deleteFatura($id){
         if ($this->con->exec("DELETE FROM faturas WHERE id = '{$id}'")) {
 
-            return 'Fatura deletada com Sucesso!';
+            return true;
         }
 
         return FALSE;
@@ -29,7 +29,7 @@ class Fatura{
 
     function editeFatura($id, $lancada, $venc, $cat, $fornec, $pagar, $desc, $pago, $status){
         if($this->con->exec("UPDATE faturas SET lancada = '{$lancada}', vencimento = '{$venc}', categoria = '{$cat}', fornecedor = '{$fornec}', valor = '{$pagar}', desconto = '{$desc}', pago = '{$pago}', status = '{$status}' WHERE id = '{$id}'")){
-            return "Fatura editada com Sucesso!";
+            return true;
         }
         return false;
     }
