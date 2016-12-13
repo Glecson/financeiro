@@ -22,7 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>Material Design Bootstrap</title>
+    <title>GERENCIADORFINANCEIRO</title>
 
     <script src="../js/material.min.js"></script>
 
@@ -55,14 +55,16 @@
 <div class="collapse navbar-toggleable-xs" id="collapseEx2" style="padding-left: 550px">
     <div>
         <p><h4>LANÇAMENTO FATURAS</h4></p>
+            <?php if (isset($_GET['info'])):?>
+            <?php $info = $_REQUEST['info'];  ?>
+            <?php echo '<h5 class = "alert alert-success col-lg-6" style = "position: relative; text-align: center; left: -70px">' . $info . '</h5>'; ?>
+        <?php endif; ?>
     </div>
-    <?php if($c->cadfatura):?>
-    <?php echo $c->cadFatura; ?>
-    <?php endif; ?>
+
 </div>
 <main class="mdl-layout__content">
     <!--Naked Form-->
-    <div class="col-lg-8" style="position: relative; left: 220px; top: 30px">
+    <div class="col-lg-8" style="position: relative; left: 220px; top: -30px">
     <form method="get">
         <div class="card-block col-lg-4" style="position: relative; top: 45px" >
         <!--Body-->
@@ -97,8 +99,8 @@
         <div class="card-block col-lg-4" >
             <!--Body-->
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="position: relative; left: 50px">
-                <label for="form5" style="color: #5a5a5a; font-size:medium;top: 20px;position: relative">Data lançamento</label>
-                <input type="date" name="dtlanc" id="form5" class="form-control" tabindex="2" required>
+                <label for="form5" style="color: #5a5a5a; font-size:medium;top: 20px;position: relative">Data Vencimento</label>
+                <input type="date" name="dtvenc" id="form5" class="form-control" tabindex="2" required>
             </div>
             <br /><br />
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="position: relative; left: 50px;">
@@ -127,12 +129,12 @@
         <div class="card-block col-lg-4">
             <!--Body-->
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="position: relative; left: 50px;">
-                <label for="form5" style="color: #5a5a5a; font-size:medium;top: 20px;position: relative">Data vencimento</label>
-                <input type="date" name="dtvenc" id="form5" class="form-control" tabindex="3" required>
+                <label for="form5" style="color: #5a5a5a; font-size:medium;top: 20px;position: relative">Data Pagamento</label>
+                <input type="date" name="dtpg" id="form5" class="form-control" tabindex="3">
             </div>
             <br /><br />
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="position: relative; left: 50px;">
-                <select class="mdb-select colorful-select dropdown-primary" name="status" tabindex="9">
+                <select class="mdb-select colorful-select dropdown-primary" name="status" tabindex="6">
                     <option value="" disabled selected>Selecione um status ...</option>
                     <option value="aberta">Aberta</option>
                     <option value="fechada">Fechada</option>
@@ -146,7 +148,8 @@
         </div>
         <div class="text-xs-center">
             <button class="btn btn-default" type="submit" name="salvar" style="background-color: #303f9f">Salvar</button>
-            <button class="btn btn-default " style="background-color: #303f9f" >Voltar</button>
+            <button class="btn btn-default " style="background-color: #303f9f" onClick="javascript:window.location.href='tabelas.php'">Voltar</button>
+
         </div>
     </form>
     </div>

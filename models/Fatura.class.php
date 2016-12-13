@@ -11,8 +11,8 @@ class Fatura{
         $this->con = $conexao->getConexao();
     }
 
-    function addFatura($num, $lancada, $venc, $cat, $fornec, $valor, $status){
-        if($this->con->exec("INSERT INTO faturas (num,lancada,vencimento,categoria,fornecedor,valor, status) VALUES ('{$num}', '{$lancada}', '{$venc}', '{$cat}', '{$fornec}', '{$valor}', '{$status}')")){
+    function addFatura($num, $venc, $cat, $fornec, $valor, $status){
+        if($this->con->exec("INSERT INTO faturas (num,vencimento,categoria,fornecedor,valor, status) VALUES ('{$num}', '{$venc}', '{$cat}', '{$fornec}', '{$valor}', '{$status}')")){
             return true;
         }
             return false;
@@ -27,8 +27,8 @@ class Fatura{
         return FALSE;
     }
 
-    function editeFatura($id, $lancada, $venc, $cat, $fornec, $pagar, $desc, $pago, $status){
-        if($this->con->exec("UPDATE faturas SET lancada = '{$lancada}', vencimento = '{$venc}', categoria = '{$cat}', fornecedor = '{$fornec}', valor = '{$pagar}', desconto = '{$desc}', pago = '{$pago}', status = '{$status}' WHERE id = '{$id}'")){
+    function editeFatura($id, $pagamento, $venc, $cat, $fornec, $valor, $desc, $pago, $status){
+        if($this->con->exec("UPDATE faturas SET pagamento = '{$pagamento}', vencimento = '{$venc}', categoria = '{$cat}', fornecedor = '{$fornec}', valor = '{$valor}', desconto = '{$desc}', pago = '{$pago}', status = '{$status}' WHERE id = '{$id}'")){
             return true;
         }
         return false;
@@ -45,7 +45,44 @@ class Fatura{
 
     }
 
+    function listaFaturasAbertas(){
+        $lista = $this->con->query("SELECT * FROM faturas WHERE status = 'aberta'");
 
+        if($lista->rowCount() > 0){
+
+            return $lista->fetchAll(PDO::FETCH_ASSOC);
+        }
+        return false;
+    }
+
+    function listarFaturasApagar(){
+        $hoje = date('Y-m-d');
+        $lista = $this->con->query("SELECT * FROM faturas WHERE vencimento = '{$hoje}'");
+
+        if($lista->rowCount() > 0){
+
+            return $lista->fetchAll(PDO::FETCH_ASSOC);
+        }
+        return false;
+    }
+
+    function listarFaturasFechadas(){
+        $lista = $this->con->query("SELECT * FROM faturas WHERE status = 'fechada'");
+
+        if($lista->rowCount() > 0){
+
+            return $lista->fetchAll(PDO::FETCH_ASSOC);
+        }
+        return false;
+    }
+
+    function listarFaturasEsp($valor){
+        $lista = $this->con->query("SELECT * FROM faturas WHERE num LIKE '%$valor%'");
+
+        if($lista->rowCount() > 0){
+            return $lista->fetchALL(PDO::FETCH_ASSOC);
+        }
+    }
 
 
 }

@@ -1,3 +1,19 @@
+<?php
+
+include_once '../config.php';
+session_start();
+
+$c = new Controller();
+
+if(!$c->verificaLogin()){
+    header('Location: ../index.php');
+    exit;
+}
+
+
+$c->logouf();
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br" xmlns="http://www.w3.org/1999/html">
 
@@ -7,7 +23,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>Material Design Bootstrap</title>
+    <title>GERENCIADORFINANCEIRO</title>
 
     <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
     
@@ -35,7 +51,7 @@
   <header class="mdl-layout__header #303f9f indigo darken-3">
     <div class="mdl-layout__header-row">
       <!-- Title -->
-      <a href="#"><span class="mdl-layout-title white-text">GERENCIADORFINANCEIRO</span></a>
+      <a href="tabelas.php"><span class="mdl-layout-title white-text">GERENCIADORFINANCEIRO</span></a>
 
     </div>
     <!-- Tabs -->

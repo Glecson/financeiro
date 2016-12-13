@@ -1,3 +1,20 @@
+<?php
+
+include_once '../config.php';
+session_start();
+
+$c = new Controller();
+
+if(!$c->verificaLogin()){
+    header('Location: ../index.php');
+    exit;
+}
+
+
+$c->logouf();
+
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br" xmlns="http://www.w3.org/1999/html">
 
@@ -7,7 +24,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>Material Design Bootstrap</title>
+    <title>GERENCIADORFINANCEIRO</title>
 
     <script src="../js/material.min.js"></script>
 
@@ -77,7 +94,7 @@
         </div>
         <div class="text-xs-center col-md-10">
             <button class="btn btn-default" type="submit" name="salvar" style="background-color: #303f9f">Salvar</button>
-            <button class="btn btn-default " style="background-color: #303f9f" >Voltar</button>
+            <button class="btn btn-default " style="background-color: #303f9f" onClick="javascript:window.location.href='usuarios.php'">Voltar</button>
         </div>
     </form>
     </div>

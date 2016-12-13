@@ -4,6 +4,10 @@ class Controller{
 
     public $login = false;
     public $cadfatura = false;
+    public $listaFaturas = false;
+    public $faturasAbertas = false;
+    public $faturasFechadas = false;
+    public $faturasApagar = false;
 
     function login() {
 
@@ -66,14 +70,9 @@ class Controller{
     }
 
     function cadFatura(){
-        if(!$this->verificaLogin()){
-            header('Location: ../index.php');
-            exit;
-        }
 
         if(isset($_REQUEST['salvar'])){
             $num = $_REQUEST['num'];
-            $lanc = $_REQUEST['dtlanc'];
             $venc = $_REQUEST['dtvenc'];
             $cat = $_REQUEST['categ'];
             $forn = $_REQUEST['forn'];
@@ -82,13 +81,26 @@ class Controller{
 
             $fat = new Fatura();
 
-            if($fat->addFatura($num, $lanc, $venc, $cat, $forn, $valor, $status)){
+            if($fat->addFatura($num, $venc, $cat, $forn, $valor, $status)){
                 $this->cadfatura = 'Fatura lançada com Sucesso!';
+                header("Location: ../views/cadfatura.php?info=" . $this->cadfatura);
             }
         }
     }
 
+    function listarFaturas(){
+        $fat = new Fatura();
 
+        if(isset($_REQUEST['busca'])){
+            $valor = $_REQUEST['busca'];
+            $this->listaFaturas = $fat->listarFaturasEsp($valor);
+        }else {
+            $this->listaFaturas = $fat->listaFaturas();
+            $this->faturasAbertas = $fat->listaFaturasAbertas();
+            $this->faturasApagar = $fat->listarFaturasApagar();
+            $this->faturasFechadas = $fat->listarFaturasFechadas();
+        }
+    }
 
 
 

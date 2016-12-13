@@ -12,8 +12,11 @@
 
 
     $c->logouf();
-
-
+    $c->listarFaturas();
+    $faturas = $c->listaFaturas;
+    $faturasAbertas = $c->faturasAbertas;
+    $faturasFechadas = $c->faturasFechadas;
+    $faturasPagar = $c->faturasApagar;
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +28,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>Material Design Bootstrap</title>
+    <title>GERENCIADORFINANCEIRO</title>
 
     <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
     
@@ -62,7 +65,7 @@
       <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Todas as Faturas</a>
       <a href="#fixed-tab-2" class="mdl-layout__tab">Faturas abertas</a>
       <a href="#fixed-tab-3" class="mdl-layout__tab">Faturas à Pagar</a>
-      <a href="#fixed-tab-3" class="mdl-layout__tab">Faturas Pagas</a>
+      <a href="#fixed-tab-4" class="mdl-layout__tab">Faturas Pagas</a>
     </div>
   </header>
 
@@ -81,7 +84,9 @@
                   mdl-textfield--floating-label mdl-textfield--align-right">
                             <label class="mdl-button mdl-js-button mdl-button--icon"
                                    for="fixed-header-drawer-exp">
-                                <i class="material-icons">search</i>
+                                <div id="tt1" class="icon material-icons">search</div>
+                                <div class="mdl-tooltip" data-mdl-for="tt1"><strong>Busca pelo N° Boleto</strong>
+                                </div>
                             </label>
                             <div class="mdl-textfield__expandable-holder">
                                 <input class="mdl-textfield__input" type="text" name="busca"
@@ -110,37 +115,41 @@
                             <th>Valor</th>
                             <th>Desconto</th>
                             <th>Pago</th>
-                            <th>Actions</th>
+                            <th>Ações</th>
                         </tr>
                         </thead>
                         <tbody>
+                        <?php if($faturas): ?>
+                        <?php foreach($faturas as $fatura): ?>
                         <tr>
-                            <td>First Name</td>
-                            <td>First Name</td>
-                            <td>Abby</td>
-                            <td>Barrett</td>
-                            <td>@abbeme</td>
-                            <td>Barrett</td>
-                            <td>@abbeme</td>
+                            <td><?php echo $fatura['status']; ?></td>
+                            <td><?php echo $fatura['num']; ?></td>
+                            <td><?php echo $fatura['vencimento']; ?></td>
+                            <td><?php echo $fatura['fornecedor']; ?></td>
+                            <td><?php echo $fatura['valor']; ?></td>
+                            <td><?php echo $fatura['desconto']; ?></td>
+                            <td><?php echo $fatura['pago']; ?></td>
                             <td>
-                                <a class="blue-text"><div id="tt1" class="icon material-icons">visibility</div>
+                                <a class="black-text"><div class="icon material-icons">visibility</div>
                                     <div class="mdl-tooltip" data-mdl-for="tt1"><strong>Visualizar</strong>
                                     </div>
                                 </a>
-                                <a class="green-text"><div id="tt2" class="icon material-icons">border_color</div>
+                                <a class="black-text"><div class="icon material-icons">border_color</div>
                                     <div class="mdl-tooltip" data-mdl-for="tt2"><strong>Editar</strong>
                                     </div>
                                 </a>
-                                <a class="red-text"><div id="tt3" class="icon material-icons">delete_sweep</div>
+                                <a class="black-text"><div  class="icon material-icons">delete_sweep</div>
                                     <div class="mdl-tooltip" data-mdl-for="tt3"><strong>Deletar</strong>
                                     </div>
                                 </a>
-                                <a class="black-text"><div id="tt4" class="icon material-icons">picture_as_pdf</div>
+                                <a class="black-text"><div  class="icon material-icons">picture_as_pdf</div>
                                     <div class="mdl-tooltip" data-mdl-for="tt4"><strong>Gerar PDF</strong>
                                     </div>
                                 </a>
                             </td>
                         </tr>
+                        <?php endforeach; ?>
+                        <?php endif; ?>
                         </tbody>
                     </table>
 
@@ -163,37 +172,41 @@
                           <th>Valor</th>
                           <th>Desconto</th>
                           <th>Pago</th>
-                          <th>Actions</th>
+                          <th>Ações</th>
                       </tr>
                       </thead>
                       <tbody>
+                      <?php if($faturasAbertas): ?>
+                      <?php foreach($faturasAbertas as $fatura): ?>
                       <tr>
-                          <td>First Name</td>
-                          <td>First Name</td>
-                          <td>Abby</td>
-                          <td>Barrett</td>
-                          <td>@abbeme</td>
-                          <td>Barrett</td>
-                          <td>@abbeme</td>
+                          <td><?php echo $fatura['status']; ?></td>
+                          <td><?php echo $fatura['num']; ?></td>
+                          <td><?php echo $fatura['vencimento']; ?></td>
+                          <td><?php echo $fatura['fornecedor']; ?></td>
+                          <td><?php echo $fatura['valor']; ?></td>
+                          <td><?php echo $fatura['desconto']; ?></td>
+                          <td><?php echo $fatura['pago']; ?></td>
                           <td>
-                              <a class="blue-text"><div id="tt1" class="icon material-icons">visibility</div>
+                              <a class="black-text"><div class="icon material-icons">visibility</div>
                                   <div class="mdl-tooltip" data-mdl-for="tt1"><strong>Visualizar</strong>
                                   </div>
                               </a>
-                              <a class="green-text"><div id="tt2" class="icon material-icons">border_color</div>
+                              <a class="black-text"><div class="icon material-icons">border_color</div>
                                   <div class="mdl-tooltip" data-mdl-for="tt2"><strong>Editar</strong>
                                   </div>
                               </a>
-                              <a class="red-text"><div id="tt3" class="icon material-icons">delete_sweep</div>
+                              <a class="black-text"><div class="icon material-icons">delete_sweep</div>
                                   <div class="mdl-tooltip" data-mdl-for="tt3"><strong>Deletar</strong>
                                   </div>
                               </a>
-                              <a class="black-text"><div id="tt4" class="icon material-icons">picture_as_pdf</div>
+                              <a class="black-text"><div  class="icon material-icons">picture_as_pdf</div>
                                   <div class="mdl-tooltip" data-mdl-for="tt4"><strong>Gerar PDF</strong>
                                   </div>
                               </a>
                           </td>
                       </tr>
+                          <?php endforeach; ?>
+                          <?php endif; ?>
                       </tbody>
                   </table>
 
@@ -201,7 +214,7 @@
           </div>
       </div>
     </section>
-    <section class="mdl-layout__tab-panel" id="fixed-tab-3">
+      <section class="mdl-layout__tab-panel" id="fixed-tab-3">
       <div class="page-content">
           <div class="row">
               <div class="col-md-12" style="padding-left: 100px">
@@ -216,37 +229,41 @@
                           <th>Valor</th>
                           <th>Desconto</th>
                           <th>Pago</th>
-                          <th>Actions</th>
+                          <th>Ações</th>
                       </tr>
                       </thead>
                       <tbody>
+                      <?php if($faturasPagar): ?>
+                      <?php foreach($faturasPagar as $fatura): ?>
                       <tr>
-                          <td>First Name</td>
-                          <td>First Name</td>
-                          <td>Abby</td>
-                          <td>Barrett</td>
-                          <td>@abbeme</td>
-                          <td>Barrett</td>
-                          <td>@abbeme</td>
+                          <td><?php echo $fatura['status']; ?></td>
+                          <td><?php echo $fatura['num']; ?></td>
+                          <td><?php echo $fatura['vencimento']; ?></td>
+                          <td><?php echo $fatura['fornecedor']; ?></td>
+                          <td><?php echo $fatura['valor']; ?></td>
+                          <td><?php echo $fatura['desconto']; ?></td>
+                          <td><?php echo $fatura['pago']; ?></td>
                           <td>
-                              <a class="blue-text"><div id="tt1" class="icon material-icons">visibility</div>
+                              <a class="black-text"><div class="icon material-icons">visibility</div>
                                   <div class="mdl-tooltip" data-mdl-for="tt1"><strong>Visualizar</strong>
                                   </div>
                               </a>
-                              <a class="green-text"><div id="tt2" class="icon material-icons">border_color</div>
+                              <a class="black-text"><div  class="icon material-icons">border_color</div>
                                   <div class="mdl-tooltip" data-mdl-for="tt2"><strong>Editar</strong>
                                   </div>
                               </a>
-                              <a class="red-text"><div id="tt3" class="icon material-icons">delete_sweep</div>
+                              <a class="black-text"><div  class="icon material-icons">delete_sweep</div>
                                   <div class="mdl-tooltip" data-mdl-for="tt3"><strong>Deletar</strong>
                                   </div>
                               </a>
-                              <a class="black-text"><div id="tt4" class="icon material-icons">picture_as_pdf</div>
+                              <a class="black-text"><div class="icon material-icons">picture_as_pdf</div>
                                   <div class="mdl-tooltip" data-mdl-for="tt4"><strong>Gerar PDF</strong>
                                   </div>
                               </a>
                           </td>
                       </tr>
+                          <?php endforeach; ?>
+                          <?php endif; ?>
                       </tbody>
                   </table>
 
@@ -254,6 +271,63 @@
           </div>
       </div>
     </section>
+      <section class="mdl-layout__tab-panel" id="fixed-tab-4">
+          <div class="page-content">
+              <div class="row">
+                  <div class="col-md-12" style="padding-left: 100px">
+
+                      <table class="table">
+                          <thead>
+                          <tr>
+                              <th>Status</th>
+                              <th>Num</th>
+                              <th>Vencimento</th>
+                              <th>Fornecedor</th>
+                              <th>Valor</th>
+                              <th>Desconto</th>
+                              <th>Pago</th>
+                              <th>Ações</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <?php if($faturasFechadas): ?>
+                              <?php foreach($faturasFechadas as $fatura): ?>
+                                  <tr>
+                                      <td><?php echo $fatura['status']; ?></td>
+                                      <td><?php echo $fatura['num']; ?></td>
+                                      <td><?php echo $fatura['vencimento']; ?></td>
+                                      <td><?php echo $fatura['fornecedor']; ?></td>
+                                      <td><?php echo $fatura['valor']; ?></td>
+                                      <td><?php echo $fatura['desconto']; ?></td>
+                                      <td><?php echo $fatura['pago']; ?></td>
+                                      <td>
+                                          <a class="black-text"><div class="icon material-icons">visibility</div>
+                                              <div class="mdl-tooltip" data-mdl-for="tt1"><strong>Visualizar</strong>
+                                              </div>
+                                          </a>
+                                          <a class="black-text"><div  class="icon material-icons">border_color</div>
+                                              <div class="mdl-tooltip" data-mdl-for="tt2"><strong>Editar</strong>
+                                              </div>
+                                          </a>
+                                          <a class="black-text"><div  class="icon material-icons">delete_sweep</div>
+                                              <div class="mdl-tooltip" data-mdl-for="tt3"><strong>Deletar</strong>
+                                              </div>
+                                          </a>
+                                          <a class="black-text"><div  class="icon material-icons">picture_as_pdf</div>
+                                              <div class="mdl-tooltip" data-mdl-for="tt4"><strong>Gerar PDF</strong>
+                                              </div>
+                                          </a>
+                                      </td>
+                                  </tr>
+                              <?php endforeach; ?>
+                          <?php endif; ?>
+                          </tbody>
+                      </table>
+
+                  </div>
+              </div>
+          </div>
+      </section>
   </main>
     <?php include 'rodape.php'; ?>
     </div>
