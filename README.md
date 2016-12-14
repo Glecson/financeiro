@@ -1,2 +1,2 @@
 # financeiro
-Gerenciador financeiro controle de contas à pagar utilizando o frameword MDL
+Gerenciador financeiro controle de contas à pagar utilizando o framework MDL
